@@ -1,7 +1,7 @@
 #!/usr/bin/sh
-echo "commit message:"
+printf "enter commit message: "
 read message
-echo "\n"
+echo ""
 
 echo "copying files into ./alacritty/"
 cp -r ~/.config/alacritty/*  ./alacritty
