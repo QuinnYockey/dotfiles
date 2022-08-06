@@ -29,6 +29,7 @@ echo -e "${GREEN}copying files into ./vim/${NOCOLOR}"
 cp -r ~/.vimrc               ./vim
 echo -e "${GREEN}copying files into ./zsh/${NOCOLOR}"
 cp -r ~/.zshrc               ./zsh
+echo ""
 
 echo -e "${GREEN}adding all files for commit${NOCOLOR}"
 git add -A
