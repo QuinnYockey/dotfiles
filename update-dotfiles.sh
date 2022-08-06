@@ -1,35 +1,39 @@
 #!/usr/bin/sh
+
+GREEN='\033[0;32m'
+NOCOLOR='\033[0m'
+
 printf "enter commit message: "
 read message
 echo ""
 
-echo "copying files into ./alacritty/"
+echo -e "${GREEN}copying files into ./alacritty/${NOCOLOR}"
 cp -r ~/.config/alacritty/*  ./alacritty
-echo "copying files into ./awesome/"
+echo "${GREEN}copying files into ./awesome/${NOCOLOR}"
 cp -r ~/.config/awesome/*    ./awesome
-echo "copying files into ./bash/"
+echo "${GREEN}copying files into ./bash/${NOCOLOR}"
 cp -r ~/.bashrc              ./bash
-echo "copying files into ./emacs/"
+echo "${GREEN}copying files into ./emacs/${NOCOLOR}"
 cp -r ~/.doom.d              ./emacs
-echo "copying files into ./i3/"
+echo "${GREEN}copying files into ./i3/${NOCOLOR}"
 cp -r ~/.config/i3/*         ./i3
-echo "copying files into ./neofetch/"
+echo "${GREEN}copying files into ./neofetch/${NOCOLOR}"
 cp -r ~/.config/neofetch/*   ./neofetch
-echo "copying files into ./nvim/"
+echo "${GREEN}copying files into ./nvim/${NOCOLOR}"
 cp -r ~/.config/nvim/*       ./nvim
-echo "copying files into ./polybar/"
+echo "${GREEN}copying files into ./polybar/${NOCOLOR}"
 cp -r /etc/polybar/*         ./polybar
-echo "copying files into ./rofi/"
+echo "${GREEN}copying files into ./rofi/${NOCOLOR}"
 cp -r ~/.config/rofi/*       ./rofi
-echo "copying files into ./vim/"
+echo "${GREEN}copying files into ./vim/${NOCOLOR}"
 cp -r ~/.vimrc               ./vim
-echo "copying files into ./zsh/"
+echo "${GREEN}copying files into ./zsh/${NOCOLOR}"
 cp -r ~/.zshrc               ./zsh
 
-echo "adding all files for commit"
+echo "${GREEN}adding all files for commit${NOCOLOR}"
 git add -A
-echo "commiting"
+echo "${GREEN}commiting${NOCOLOR}"
 git commit -m "$message"
-echo "pushing changes"
+echo "${GREEN}pushing changes${NOCOLOR}"
 git push
-echo "done!"
+echo "${GREEN}done!${NOCOLOR}"
