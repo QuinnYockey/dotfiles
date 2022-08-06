@@ -1,0 +1,1 @@
+/home/quinn/.doom.d
